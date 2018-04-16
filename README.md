@@ -7,7 +7,7 @@ npm install
 browser install
 ```
 
-## Execute script
+## Execute Server
 ```bash
 gulp serve
 ```
