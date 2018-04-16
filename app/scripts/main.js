@@ -1,5 +1,3 @@
-console.log('\'Allo \'Allo!');
-
  window.addEventListener('load', function() {
   doGetCompilers();
 });
@@ -52,11 +50,10 @@ function doGetCompilers()  {
 function    doCompileSolidityContract()  {
     console.log(document.getElementById('select_to_compile_version'));
     var compilerVersion = document.getElementById('select_to_compile_version').value;
-    console.log(compilerVersion);
-
     // Clen output field
     document.getElementById('compiled_bytecode').value='';
     document.getElementById('compiled_abidefinition').value='';
+    document.getElementById('layout').style.display = 'block';
 
     //console.log(source);
     window.BrowserSolc.loadVersion(compilerVersion, function(c) {
@@ -82,6 +79,13 @@ function    doCompileSolidityContract()  {
           var bytecode = '0x' + thisMap[0][1].bytecode;
           document.getElementById('compiled_bytecode').value=bytecode;
           document.getElementById('compiled_abidefinition').value=JSON.stringify(abi);
+          document.getElementById('layout').style.display = 'none';
       }
   });
+}
+
+
+function showLoading()
+{
+
 }

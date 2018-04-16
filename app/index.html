@@ -1,3 +1,9 @@
+<!--
+Example of browser-solc website
+Author: Albert Lin
+Date: 2018/4/16
+Email: ksin751119@gmail.com
+-->
 <!doctype html>
 <html lang="">
   <head>
@@ -26,6 +32,7 @@
 
     <div class="hero-unit">
       <h1>Online Solc</h1>
+      Feature provide by <a href="https://github.com/ericxtang/browser-solc">browser-solc</a><br>
     </div>
     <div class="hero-unit-content">
         <div style="float:left;">
@@ -55,7 +62,7 @@
           </textarea>
           <br>
           <button id="button_do_compile" onclick="doCompileSolidityContract()">Compile Code</button>
-
+          <div id="layout" class="layout"><img src="images/loading.gif"/></div>
         </div>
 
         <!-- compilation result -->
